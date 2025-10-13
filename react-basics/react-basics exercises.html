@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+            // 2a,2b, 2c,2d exercise
+            function LoginForm(){
+              return(
+              <>
+                <div>
+                <input type='email' placeholder="Email"/>
+                 </div>
+                  <div>
+                <input type='password' placeholder="Password"/>
+                 </div>
+                <button>Login</button>
+                <button>Sign up</button>
+                </>
+              );
+            }
+            // function App(){
+            //   return(
+            //     <>
+            //     <p>"Hello, welcome to my website...."</p>
+            //     <LoginForm />
+            //     </>
+
+            //   );
+           // }
+            //
+
+            // 2e, 2f,2g, 2h exercise, 
+            function ProductDetails({name,price,discountPrice}){
+              return(
+              <>
+               <p>{name}</p>
+               {discountPrice && (
+                 <>
+                  <p><del>Price: ${price}</del></p>
+                   <p>Discount price: ${discountPrice}</p>
+                 </>
+               )}
+              <button>Add to Cart</button>
+              </>
+            );
+            }
+            function App(){
+              return(
+              <>
+              console.log("sai");
+              <ProductDetails
+              name="Cotton socks"
+              price="10.90"
+              discountPrice= "5.45"
+               />
+              
+              <ProductDetails
+              name="Tennis balls"
+              price="6.00"
+              />
+              <ProductDetails
+              name="Plain T-Shirt"
+              price="7.99"
+              />
+              </>
+            );
+            }
+
+
+            const container = document.querySelector('.js-container');
+            const root = ReactDOM.createRoot(container);
+            root.render(<App />);
+    </script>
+  </body>
+</html>
