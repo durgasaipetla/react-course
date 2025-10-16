@@ -62,6 +62,7 @@
       } 
       .chat-msg-profile{
         width: 45px;
+        border-radius: 45px;
 
       }
       .chat-messages-container{
@@ -187,7 +188,7 @@
             {sender === "robot" && 
             <img  className="chat-msg-profile" src="robot.png"  />}
             <div className="chat-msg-text">{message}</div>
-            {sender === "user" && <img className="chat-msg-profile" src="user.png" />}
+            {sender === "user" && <img className="chat-msg-profile" src="sAI.png" />}
           </div>
         );
       }

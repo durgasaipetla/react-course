@@ -3,8 +3,11 @@
 const Chatbot = {
   defaultResponses: {
     'hello hi': `Hello! How can I help you?`,
+    'hi': `Hi How can i help you`,
     'how are you': `I'm doing great! How can I help you?`,
     'who is the ceo of ekip it': 'Sriram ruttala',
+    'Do you know about manoj koluguri':' yes obviously  previouly he is Project Manager Scrum Master at Kaiser Permanente, right now he is working in Ekip it as a project manager ',
+
     'flip a coin': function () {
       const randomNumber = Math.random();
       if (randomNumber < 0.5) {
